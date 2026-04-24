@@ -1,0 +1,49 @@
+html {
+ font-size: 16px;
+ background-color: rgb(150,100,200);
+}
+
+header {
+ display: flex;
+ width: 100%;
+ height: auto;
+ align-items: center;
+ text-align: center;
+ font-size: 3rem;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+ color: white;
+ background-color: black;
+}
+
+nav {
+ position: fixed;
+ display: inline-flex;
+ width: 10%;
+ top: 0px;
+ left: 0px;
+ background-color: rgba(160,50,220,0.5);
+ border: 3px solid black;
+}
+
+article {
+ display: inline-flex;
+ width: 90%;
+ height: auto;
+ left: 10%;
+ border: 5px groove purple;
+}
+
+article h3 {
+ font-family:'Times New Roman', Times, serif;
+ color: darkblue;
+}
+
+article href {
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 1.1rem;
+ transition: font-size 800ms linear 200ms;
+}
+
+article href:hover {
+ font-size: 1.3rem;
+}
