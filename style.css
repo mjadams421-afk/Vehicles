@@ -26,6 +26,7 @@ nav {
 }
 
 article {
+ position: absolute;
  display: flex;
  width: 90%;
  height: auto;
@@ -34,14 +35,20 @@ article {
 }
 
 article #Car {
+ position: relative;
+ top: 100px;
  border: 3px solid black;
 }
 
 article #Quad {
+ position: relative;
+ top: 100px;
  border: 3px solid black;
 }
 
 article #Bike {
+ position: relative;
+ top: 100px;
  border: 3px solid black;
 }
 
