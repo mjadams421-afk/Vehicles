@@ -30,25 +30,25 @@ article {
  display: flex;
  width: 90%;
  height: auto;
- top: 150px;
+ top: 0px;
  left: 200px;
 }
 
 article #Car {
- position: relative;
- top: 100px;
+ width: 100%;
+ height: auto;
  border: 3px solid black;
 }
 
 article #Quad {
- position: relative;
- top: 100px;
+ width: 100%;
+ height: auto;
  border: 3px solid black;
 }
 
 article #Bike {
- position: relative;
- top: 100px;
+ width: 100%;
+ height: auto;
  border: 3px solid black;
 }
 
