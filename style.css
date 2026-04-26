@@ -28,6 +28,7 @@ nav {
 article {
  position: relative;
  display: flex;
+ flex-direction: column;
  width: 90%;
  height: auto;
  top: 0px;
@@ -35,19 +36,19 @@ article {
 }
 
 article #Car {
- width: 100%;
+ width: 80%;
  height: auto;
  border: 3px solid black;
 }
 
 article #Quad {
- width: 100%;
+ width: 80%;
  height: auto;
  border: 3px solid black;
 }
 
 article #Bike {
- width: 100%;
+ width: 80%;
  height: auto;
  border: 3px solid black;
 }
@@ -60,7 +61,7 @@ article h3 {
 article a {
  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  font-size: 1.1rem;
- transition: font-size 800ms linear 200ms;
+ transition: font-size 800ms linear 200ms, color 800ms linear 200ms;
 }
 
 article a:hover {
