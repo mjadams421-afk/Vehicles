@@ -19,36 +19,53 @@ nav {
  position: fixed;
  display: inline-flex;
  width: 200px;
+ height: 100%;
  top: 150px;
  left: 0px;
  background-color: white;
  border: 3px solid black;
 }
 
+nav p {
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 1.2rem;
+}
+
+nav a {
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 1.1rem;
+ transition: font-size 800ms linear 200ms, color 800ms linear 200ms;
+}
+
+nav a:hover {
+ font-size: 1.3rem;
+ color: greenyellow;
+}
+
 article {
  position: relative;
  display: flex;
  flex-direction: column;
- width: 90%;
+ width: 100%;
  height: auto;
  top: 0px;
  left: 200px;
 }
 
 article #Car {
- width: 80%;
+ width: 95%;
  height: auto;
  border: 3px solid black;
 }
 
 article #Quad {
- width: 80%;
+ width: 95%;
  height: auto;
  border: 3px solid black;
 }
 
 article #Bike {
- width: 80%;
+ width: 95%;
  height: auto;
  border: 3px solid black;
 }
@@ -56,6 +73,7 @@ article #Bike {
 article h3 {
  font-family:'Times New Roman', Times, serif;
  color: darkblue;
+ font-size: 1.5rem;
 }
 
 article a {
