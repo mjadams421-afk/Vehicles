@@ -18,9 +18,10 @@ header {
 nav {
  position: fixed;
  display: inline-flex;
+ flex-direction: column;
  width: 200px;
  height: 100%;
- top: 150px;
+ top: 0px;
  left: 0px;
  background-color: white;
  border: 3px solid black;
@@ -46,26 +47,26 @@ article {
  position: relative;
  display: flex;
  flex-direction: column;
- width: 100%;
+ width: 90%;
  height: auto;
  top: 0px;
  left: 200px;
 }
 
 article #Car {
- width: 95%;
+ width: 90%;
  height: auto;
  border: 3px solid black;
 }
 
 article #Quad {
- width: 95%;
+ width: 90%;
  height: auto;
  border: 3px solid black;
 }
 
 article #Bike {
- width: 95%;
+ width: 90%;
  height: auto;
  border: 3px solid black;
 }
