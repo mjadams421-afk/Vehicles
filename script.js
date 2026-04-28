@@ -6,7 +6,7 @@ let update = document.getElementById("curent");
 
 function Add() {
 update.innerHTML= "Car_Suzuki Kizashi, Quad_ Honda Recon, 
-Bike_ Cannondale Trail"
-};
+Bike_ Cannondale Trail";
+}
 
-document.addEventListener("click", Add);
+update.addEventListener("click", Add);
