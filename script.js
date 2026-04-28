@@ -5,8 +5,7 @@ alert  ("For more information on the vehicles please see links below");
 let update = document.getElementById("curent");
 
 function Add() {
-update.innerHTML= "Car_Suzuki Kizashi, Quad_ Honda Recon, 
-Bike_ Cannondale Trail";
+update.innerHTML= "Car_Suzuki Kizashi, Quad_ Honda Recon, Bike_ Cannondale Trail";
 }
 
 update.addEventListener("click", Add);
