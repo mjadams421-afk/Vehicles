@@ -13,8 +13,14 @@ news.innerHTML= "All new information is below";
 update.style.fontSize = "1.3rem";
 update.style.color = "red";
 }
+function Reset() { 
+update.removeEventListener("mousedown", Add);
+news.removeEventListener("mousedown", Plus);
+}
+//Event Listeners
 
 update.addEventListener("mousedown", Add);
 news.addEventListener("mousedown", Plus);
-reset.removeEventListener("mousedown", Add);
-reset.removeEventListener("mousedown", Plus);
+
+//RESET button
+reset.addEventListener("mousedown", Reset);

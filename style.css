@@ -9,6 +9,8 @@ header {
  height: auto;
  align-items: center;
  justify-content: center;
+ position: sticky;
+ top: 0px;
  font-size: 3rem;
  font-family:Verdana, Geneva, Tahoma, sans-serif;
  color: white;
@@ -86,7 +88,7 @@ article #Bike {
 
 article #image {
  display: inline-flex;
- width: 100%;
+ width: 90%;
  height: auto;
  display: grid;
  grid-template-columns: 1fr 1fr;
