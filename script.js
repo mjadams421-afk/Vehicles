@@ -1,6 +1,4 @@
-document.getElementById("info").addEventListener("click", function() { 
-alert  ("For more information on the vehicles please see links below");
-};
+let news = document.getElementById("info")
 
 let update = document.getElementById("curent");
 
@@ -8,4 +6,10 @@ function Add() {
 update.innerHTML= "Car_Suzuki Kizashi, Quad_ Honda Recon, Bike_ Cannondale Trail";
 }
 
-update.addEventListener("click", Add);
+function Plus() {
+news.innerHTML= "All new information is below";
+}
+
+
+update.addEventListener("mousedown", Add);
+news.addEventListener("mousedown", Plus);
