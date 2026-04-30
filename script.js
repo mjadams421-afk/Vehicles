@@ -1,6 +1,6 @@
-let news = document.getElementById("info")
+const news = document.getElementById("info")
 
-let update = document.getElementById("curent");
+const update = document.getElementById("curent");
 
 function Add() {
 update.innerHTML= "Car_Suzuki Kizashi, Quad_ Honda Recon, Bike_ Cannondale Trail";
