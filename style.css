@@ -15,6 +15,7 @@ header {
  font-family:Verdana, Geneva, Tahoma, sans-serif;
  color: white;
  background-color: black;
+ z-index:2;
 }
 
 nav {
@@ -65,30 +66,30 @@ article {
  width: 90%;
  height: auto;
  top: 0px;
- left: 200px;
+ left: 250px;
 }
 
 article #Car {
- width: 90%;
+ width: 100%;
  height: auto;
  border: 3px solid black;
 }
 
 article #Quad {
- width: 90%;
+ width: 100%;
  height: auto;
  border: 3px solid black;
 }
 
 article #Bike {
- width: 90%;
+ width: 100%;
  height: auto;
  border: 3px solid black;
 }
 
 article #image {
  display: inline-flex;
- width: 90%;
+ width: 100%;
  height: auto;
  display: grid;
  grid-template-columns: 1fr 1fr;
