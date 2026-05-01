@@ -24,10 +24,11 @@ nav {
  flex-direction: column;
  width: 200px;
  height: 100%;
- top: 80px;
+ top: 0px;
  left: 0px;
  background-color: white;
  border: 3px solid black;
+ z-index:3;
 }
 
 nav p {
@@ -66,7 +67,7 @@ article {
  width: 90%;
  height: auto;
  top: 0px;
- left: 250px;
+ left: 230px;
 }
 
 article #Car {
