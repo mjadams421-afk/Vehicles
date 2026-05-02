@@ -3,6 +3,8 @@ const news = document.getElementById("info")
 const update = document.getElementById("curent");
 const reset = document.getElementById("reset");
 
+const X = Math.floor(Math.random() * 100);
+
 //Functions with variables
 function Add() {
 update.innerHTML= "Car_Suzuki Kizashi, Quad_ Honda Recon, Bike_ Cannondale Trail";
@@ -14,7 +16,7 @@ function Plus() {
 news.innerHTML= "All new information is below";
 update.style.fontSize = "1.3rem";
 update.style.color = "red";
-document.getElementById("textB").innerHTML = "Text was displayed for information";
+document.getElementById("textB").innerHTML = "Text was displayed for information" + "Random number: " + X;
 }
 function Reset() { 
 update.innerHTML= "Click to get information";
