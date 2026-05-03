@@ -2,8 +2,13 @@
 const news = document.getElementById("info")
 const update = document.getElementById("curent");
 const reset = document.getElementById("reset");
-
-const X = Math.floor(Math.random() * 100);
+//Random number generator
+let X = Math.floor(Math.random() * 100);
+let Y = '';
+if (X <= 10) {let Y = 'Number is low'} 
+else if (X > 10 && X <= 80) 
+{let Y = 'Number is Good interval'} 
+else {let Y = 'Number is high'}
 
 //Functions with variables
 function Add() {
@@ -16,7 +21,8 @@ function Plus() {
 news.innerHTML= "All new information is below";
 update.style.fontSize = "1.3rem";
 update.style.color = "red";
-document.getElementById("textB").innerHTML = "Text was displayed for information" + "Random number: " + X;
+document.getElementById("textB").innerHTML = "Text was displayed for information" + "Random number: " + " " 
++ X + " " + Y;
 }
 function Reset() { 
 update.innerHTML= "Click to get information";
