@@ -5,10 +5,11 @@ const reset = document.getElementById("reset");
 //Random number generator
 let X = Math.floor(Math.random() * 100);
 let Y = '';
-if (X <= 10) {let Y = 'Number is low'} 
+if (X <= 10) { Y = 'Number is low'} 
 else if (X > 10 && X <= 80) 
-{let Y = 'Number is Good interval'} 
-else {let Y = 'Number is high'}
+{ Y = 'Number is Good interval'} 
+else { Y = 'Number is high'}
+let Z = ["Quad",1,"Car",1,"Bike",2];
 
 //Functions with variables
 function Add() {
@@ -21,7 +22,7 @@ function Plus() {
 news.innerHTML= "All new information is below";
 update.style.fontSize = "1.3rem";
 update.style.color = "red";
-document.getElementById("textB").innerHTML = "Text was displayed for information" + "Random number: " + " " 
+document.getElementById("textB").innerHTML = "Text was displayed for information." + " " + "Random number: " + " " 
 + X + " " + Y;
 }
 function Reset() { 
