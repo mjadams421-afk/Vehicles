@@ -27,6 +27,7 @@ nav {
  height: 100%;
  top: 0px;
  left: 0px;
+ overflow: scroll;
  background-color: white;
  border: 3px solid black;
  z-index:3;
