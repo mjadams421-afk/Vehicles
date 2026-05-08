@@ -3,6 +3,9 @@ const news = document.getElementById("info")
 const update = document.getElementById("curent");
 const reset = document.getElementById("reset");
 const log = document.getElementById("textInfo");
+//Vehicle information variables
+const carInfo = document.getElementById("carInfo");
+
 //Random number generator
 let X = Math.floor(Math.random() * 100);
 let Y = '';
@@ -41,7 +44,12 @@ log.style.fontSize = "1.3rem";
 log.style.color = "white";
 }
 
+ const CarInfoButton = (car,spec) =>  {
+  carInfo.innerHTML = `<h4><a href="${car}" target="_blank">${spec}</a></h4>`;
+ }
+ const displayCar = CarInfoButton("https://genuinesuzukimanuals.com/","Suzuki Kizashi");
 //Event Listeners
+carInfo.addEventListener("mousedown", displayCar);
 update.addEventListener("mousedown", Add);
 news.addEventListener("mousedown", Plus);
 log.addEventListener("mousedown", Log);
