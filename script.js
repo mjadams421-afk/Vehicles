@@ -5,6 +5,8 @@ const reset = document.getElementById("reset");
 const log = document.getElementById("textInfo");
 //Vehicle information variables
 const carInfo = document.getElementById("carInfo");
+const quadInfo = document.getElementById("quadInfo");
+const bikeInfo = document.getElementById("bikeInfo");
 
 //Random number generator
 let X = Math.floor(Math.random() * 100);
@@ -44,12 +46,28 @@ log.style.fontSize = "1.3rem";
 log.style.color = "white";
 }
 
- const CarInfoButton = (car,spec) =>  {
-  carInfo.innerHTML = `<h4><a href="${car}" target="_blank">${spec}</a></h4>`;
- }
- const displayCar = CarInfoButton("https://genuinesuzukimanuals.com/","Suzuki Kizashi");
-//Event Listeners
+ const CarInfoButton = (car,spec,miles) =>  {
+    return `The ${car} has the following specifications: ${spec} with ${miles} miles on it.`;
+    return carInfo.style.fontSize = "1.3rem";
+}
+  const QuadInfoButton = (quad,spec) =>  {
+    return `The ${quad} has the following specifications: ${spec}`;
+    return quadInfo.style.fontSize = "1.3rem";
+}
+
+  const BikeInfoButton = (bike,spec) =>  {
+    return `The ${bike} has the following specifications: ${spec}`;
+    return bikeInfo.style.fontSize = "1.3rem";
+}
+
+const displayCar = CarInfoButton("Suzuki Kizashi", "2012 model S", "80,000 miles");
+const displayQuad = QuadInfoButton("Honda Recon", "2021 model");
+const displayBike = BikeInfoButton("Cannondale Trail", "Habit");
+//Event Listeners for vehicle information
 carInfo.addEventListener("mousedown", displayCar);
+quadInfo.addEventListener("mousedown", displayQuad);
+bikeInfo.addEventListener("mousedown", displayBike);
+//Event Listeners for buttons
 update.addEventListener("mousedown", Add);
 news.addEventListener("mousedown", Plus);
 log.addEventListener("mousedown", Log);
