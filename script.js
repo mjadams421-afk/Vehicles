@@ -45,28 +45,41 @@ log.innerHTML= "Vehicle Log" + " " + Z;
 log.style.fontSize = "1.3rem";
 log.style.color = "white";
 }
-
+  const N =Math.floor(Math.random() * 100);
  const CarInfoButton = (car,spec,miles) =>  {
-    return `The ${car} has the following specifications: ${spec} with ${miles} miles on it.`;
-    return carInfo.style.fontSize = "1.3rem";
+    
+    return `The ${car} has the following specifications: ${spec} with ${miles} miles on it. Random number: ${N}`;
+    
 }
   const QuadInfoButton = (quad,spec) =>  {
-    return `The ${quad} has the following specifications: ${spec}`;
-    return quadInfo.style.fontSize = "1.3rem";
+    return `The ${quad} has the following specifications: ${spec}. Random number: ${N}`;
+    
 }
 
   const BikeInfoButton = (bike,spec) =>  {
-    return `The ${bike} has the following specifications: ${spec}`;
-    return bikeInfo.style.fontSize = "1.3rem";
+    return `The ${bike} has the following specifications: ${spec}. Random number: ${N}`;
+    
 }
 
 const displayCar = CarInfoButton("Suzuki Kizashi", "2012 model S", "80,000 miles");
 const displayQuad = QuadInfoButton("Honda Recon", "2021 model");
 const displayBike = BikeInfoButton("Cannondale Trail", "Habit");
 //Event Listeners for vehicle information
-carInfo.addEventListener("mousedown", displayCar);
-quadInfo.addEventListener("mousedown", displayQuad);
-bikeInfo.addEventListener("mousedown", displayBike);
+function displayCarInfo() { 
+    carInfo.innerHTML = displayCar;
+    carInfo.style.fontSize = "1.3rem";
+}
+carInfo.addEventListener("mousedown", displayCarInfo);
+function displayQuadInfo() {
+    quadInfo.innerHTML = displayQuad;
+    quadInfo.style.fontSize = "1.3rem";
+}
+quadInfo.addEventListener("mousedown", displayQuadInfo);
+function displayBikeInfo() {
+    bikeInfo.innerHTML = displayBike;
+    bikeInfo.style.fontSize = "1.3rem";
+}
+bikeInfo.addEventListener("mousedown", displayBikeInfo);
 //Event Listeners for buttons
 update.addEventListener("mousedown", Add);
 news.addEventListener("mousedown", Plus);
