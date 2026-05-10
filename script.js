@@ -3,6 +3,7 @@ const news = document.getElementById("info")
 const update = document.getElementById("curent");
 const reset = document.getElementById("reset");
 const log = document.getElementById("textInfo");
+const Operation = document.getElementById("Operation");
 //Vehicle information variables
 const carInfo = document.getElementById("carInfo");
 const quadInfo = document.getElementById("quadInfo");
@@ -61,9 +62,21 @@ log.style.color = "white";
     
 }
 
+  const equation = (year,miles) => {
+    const old = year - 2026;
+    const length = miles;
+    if (old > 15) { return "Vehicle is near retirement at " + old + " years old."} else if
+    (old <=15 && old > 7) { return "Vehicle is aged and needs more frequent maintenance at " + old + " years old."} 
+    else { return "Vehicle is in good condition at " + old + " years old."}
+    if (length > 100000) { return "Vehicle has high mileage at " + miles + " miles."} else {
+    return "Vehicle has low mileage at " + length + " miles."}
+    }
+
+  
 const displayCar = CarInfoButton("Suzuki Kizashi", "2012 model S", "80,000 miles");
 const displayQuad = QuadInfoButton("Honda Recon", "2021 model");
 const displayBike = BikeInfoButton("Cannondale Trail", "Habit");
+const displayEquation = equation(2012, 80000);
 //Event Listeners for vehicle information
 function displayCarInfo() { 
     carInfo.innerHTML = displayCar;
@@ -80,10 +93,16 @@ function displayBikeInfo() {
     bikeInfo.style.fontSize = "1.3rem";
 }
 bikeInfo.addEventListener("mousedown", displayBikeInfo);
+
+function addEquation() {
+    Operation.innerHTML = displayEquation;
+    Operation.style.fontSize = "1.3rem";
+}
 //Event Listeners for buttons
 update.addEventListener("mousedown", Add);
 news.addEventListener("mousedown", Plus);
 log.addEventListener("mousedown", Log);
+Operation.addEventListener("mousedown", addEquation);
 
 //RESET button
 reset.addEventListener("mousedown", Reset);
