@@ -4,6 +4,7 @@ const update = document.getElementById("curent");
 const reset = document.getElementById("reset");
 const log = document.getElementById("textInfo");
 const Operation = document.getElementById("Operation");
+const resetI= document.getElementById("RESETI");
 //Vehicle information variables
 const carInfo = document.getElementById("carInfo");
 const quadInfo = document.getElementById("quadInfo");
@@ -98,11 +99,16 @@ function addEquation() {
     Operation.innerHTML = displayEquation;
     Operation.style.fontSize = "1.3rem";
 }
+
+function resetInfo() {
+    Operation.innerHTML = "Click for operator information for year 2012 at 80,000 miles";
+}
 //Event Listeners for buttons
 update.addEventListener("mousedown", Add);
 news.addEventListener("mousedown", Plus);
 log.addEventListener("mousedown", Log);
 Operation.addEventListener("mousedown", addEquation);
+resetI.addEventListener("mousedown", resetInfo);
 
 //RESET button
 reset.addEventListener("mousedown", Reset);

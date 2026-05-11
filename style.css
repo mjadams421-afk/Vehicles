@@ -117,3 +117,25 @@ article a:hover {
  font-size: 1.3rem;
  color: greenyellow;
 }
+
+figure {
+ display: flex;
+ width: 100%;
+ height: auto;
+ position: relative;
+ left: 200px;
+ top: 50px;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.2rem;
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ color: white;
+ background-color: black;
+ border: 5px solid white;
+ transition: font-size 800ms linear 200ms;
+}
+
+figure:hover {
+ font-size: 1.4rem;
+ cursor: pointer;
+}
