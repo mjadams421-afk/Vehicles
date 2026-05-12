@@ -120,7 +120,7 @@ article a:hover {
 
 figure {
  display: flex;
- width: 100%;
+ width: 85%;
  height: auto;
  position: relative;
  left: 200px;
@@ -133,6 +133,11 @@ figure {
  background-color: black;
  border: 5px solid white;
  transition: font-size 800ms linear 200ms;
+}
+
+figure #RESET1 {
+ background-color: white;
+ color: black;
 }
 
 figure:hover {
