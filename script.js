@@ -5,6 +5,9 @@ const reset = document.getElementById("reset");
 const log = document.getElementById("textInfo");
 const Operation = document.getElementById("Operation");
 const resetI= document.getElementById("RESETI");
+const checkA = document.getElementById("checkA");
+const checkB = document.getElementById("checkB");
+const checkC = document.getElementById("checkC");
 //Vehicle information variables
 const carInfo = document.getElementById("carInfo");
 const quadInfo = document.getElementById("quadInfo");
@@ -73,11 +76,31 @@ log.style.color = "white";
     return "Vehicle has low mileage at " + length + " miles."}
     }
 
+    const MaintenanceOil = (year,type) => {
+     const changeOil = year-2;
+     if (year > 2 && type === "oil") { return "Oil change is needed and overdue"+ " " + changeOil;} 
+     else { return "No Warning for oil at" + " " + year + " years old.";}
+    }
+
+    const MaintenanceTires = (year) => {
+    const changeTires = year-5;
+    if (year > 5) { return "Tire change is needed and overdue"+ " " + changeTires;} 
+    else { return "No Warning for tires at" + " " + year + " years old.";}
+    }
+
+    const MaintenanceBrakes = (year) => {
+    const changeBrakes = year-6;
+    if (year > 6) { return "Brake change is needed and overdue"+ " " + changeBrakes;} 
+    else { return "No Warning for brakes at" + " " + year + " years old.";}
+    }
   
 const displayCar = CarInfoButton("Suzuki Kizashi", "2012 model S", "80,000 miles");
 const displayQuad = QuadInfoButton("Honda Recon", "2021 model");
 const displayBike = BikeInfoButton("Cannondale Trail", "Habit");
 const displayEquation = equation(2012, 80000);
+const displayOil = MaintenanceOil(2, "oil");
+const displayTires = MaintenanceTires(5);
+const displayBrakes = MaintenanceBrakes(6);
 //Event Listeners for vehicle information
 function displayCarInfo() { 
     carInfo.innerHTML = displayCar;
@@ -100,6 +123,18 @@ function addEquation() {
     Operation.style.fontSize = "1.3rem";
 }
 
+function displayOilInfo() {
+    checkA.innerHTML = displayOil;
+}
+
+function displayTireInfo() {
+    checkB.innerHTML = displayTires;
+}
+
+function displayBrakeInfo() {
+    checkC.innerHTML = displayBrakes;
+}
+
 function resetInfo() {
     Operation.innerHTML = "Click for operator information for year 2012 at 80,000 miles";
 }
@@ -108,6 +143,9 @@ update.addEventListener("mousedown", Add);
 news.addEventListener("mousedown", Plus);
 log.addEventListener("mousedown", Log);
 Operation.addEventListener("mousedown", addEquation);
+checkA.addEventListener("mousedown", displayOilInfo);
+checkB.addEventListener("mousedown", displayTireInfo);
+checkC.addEventListener("mousedown", displayBrakeInfo);
 resetI.addEventListener("mousedown", resetInfo);
 
 //RESET button
