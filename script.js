@@ -8,10 +8,12 @@ const resetI= document.getElementById("RESETI");
 const checkA = document.getElementById("checkA");
 const checkB = document.getElementById("checkB");
 const checkC = document.getElementById("checkC");
+const RESETMA = document.getElementById("RESETMA");
 //Vehicle information variables
 const carInfo = document.getElementById("carInfo");
 const quadInfo = document.getElementById("quadInfo");
 const bikeInfo = document.getElementById("bikeInfo");
+
 
 //Random number generator
 let X = Math.floor(Math.random() * 100);
@@ -125,18 +127,31 @@ function addEquation() {
 
 function displayOilInfo() {
     checkA.innerHTML = displayOil;
+    checkA.style.backgroundColor = 'green';
 }
 
 function displayTireInfo() {
     checkB.innerHTML = displayTires;
+    checkB.style.backgroundColor = 'green';
 }
 
 function displayBrakeInfo() {
     checkC.innerHTML = displayBrakes;
+    checkC.style.backgroundColor = 'green';
+
 }
 
 function resetInfo() {
     Operation.innerHTML = "Click for operator information for year 2012 at 80,000 miles";
+}
+
+function RESETMANT() {
+  checkA.innerHTML = 'Checked at 85,000 miles 2 years ago';
+  checkA.style.backgroundColor = 'white';
+  checkB.innerHTML = 'Checked at 80,000 miles 3 years ago';
+  checkB.style.backgroundColor = 'white';
+  checkC.innerHTML = 'Checked at 80,000 miles 3 years ago';
+  checkC.style.backgroundColor = 'white';
 }
 //Event Listeners for buttons
 update.addEventListener("mousedown", Add);
@@ -147,6 +162,7 @@ checkA.addEventListener("mousedown", displayOilInfo);
 checkB.addEventListener("mousedown", displayTireInfo);
 checkC.addEventListener("mousedown", displayBrakeInfo);
 resetI.addEventListener("mousedown", resetInfo);
+RESETMA.addEventListener("mousedown", RESETMANT);
 
 //RESET button
 reset.addEventListener("mousedown", Reset);
