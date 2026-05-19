@@ -9,6 +9,11 @@ const checkA = document.getElementById("checkA");
 const checkB = document.getElementById("checkB");
 const checkC = document.getElementById("checkC");
 const RESETMA = document.getElementById("RESETMA");
+//prompt variable
+const promptInputA = document.getElementById("promptA");
+const promptValueA = promptInputA.ariaValueText;
+if (promptValueA !== null) {console.log('You typed '+ promptValueA);}
+
 //Vehicle information variables
 const carInfo = document.getElementById("carInfo");
 const quadInfo = document.getElementById("quadInfo");
@@ -78,9 +83,9 @@ log.style.color = "white";
     return "Vehicle has low mileage at " + length + " miles."}
     }
 
-    const MaintenanceOil = (year,type) => {
+    const MaintenanceOil = (year) => {
      const changeOil = year-2;
-     if (year > 2 && type === "oil") { return "Oil change is needed and overdue"+ " " + changeOil;} 
+     if (year > 2) { return "Oil change is needed and overdue"+ " " + changeOil;} 
      else { return "No Warning for oil at" + " " + year + " years old.";}
     }
 
@@ -95,12 +100,12 @@ log.style.color = "white";
     if (year > 6) { return "Brake change is needed and overdue"+ " " + changeBrakes;} 
     else { return "No Warning for brakes at" + " " + year + " years old.";}
     }
-  
+//Input arguments for functions
 const displayCar = CarInfoButton("Suzuki Kizashi", "2012 model S", "80,000 miles");
 const displayQuad = QuadInfoButton("Honda Recon", "2021 model");
 const displayBike = BikeInfoButton("Cannondale Trail", "Habit");
 const displayEquation = equation(2012, 80000);
-const displayOil = MaintenanceOil(2, "oil");
+const displayOil = MaintenanceOil(2);
 const displayTires = MaintenanceTires(5);
 const displayBrakes = MaintenanceBrakes(6);
 //Event Listeners for vehicle information
