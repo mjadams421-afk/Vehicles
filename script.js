@@ -10,10 +10,18 @@ const checkB = document.getElementById("checkB");
 const checkC = document.getElementById("checkC");
 const RESETMA = document.getElementById("RESETMA");
 //prompt variable
-const promptInputA = document.getElementById("promptA");
-const promptValueA = promptInputA.ariaValueText;
-if (promptValueA !== null) {console.log('You typed '+ promptValueA);}
+function getUserData() {
+    // prompt(message, defaultValue)
+    const userInput = prompt("Please enter car years:", "years");
 
+    if (userInput >= 15 && userInput !== "") {
+    const aged = userInput - 15;
+        // Pass the prompt value back to the HTML page
+        document.getElementById("display").innerText = "Your car is past ecnomic use by " + aged;
+    } else {
+        document.getElementById("display").innerText = "Car is not past econmic use at " + userInput;
+    }
+}
 //Vehicle information variables
 const carInfo = document.getElementById("carInfo");
 const quadInfo = document.getElementById("quadInfo");
