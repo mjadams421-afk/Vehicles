@@ -13,13 +13,14 @@ const RESETMA = document.getElementById("RESETMA");
 function getUserData() {
     // prompt(message, defaultValue)
     const userInput = prompt("Please enter car years:", "years");
-
+    const RTValue = document.getElementById("display");
     if (userInput >= 15 && userInput !== "") {
     const aged = userInput - 15;
         // Pass the prompt value back to the HTML page
-        document.getElementById("display").innerText = "Your car is past ecnomic use by " + aged;
-    } else {
-        document.getElementById("display").innerText = "Car is not past econmic use at " + userInput;
+        RTValue.innerText = "Your car is past ecnomic use by " + aged +" years";
+    } else if(userInput < 15 && userInput !== "") {
+        RTValue.innerText = "Car is not past econmic use at " + userInput +" years";
+    } else {RTValue.innerHTML = "The input "+userInput+ " is not valid"
     }
 }
 //Vehicle information variables
